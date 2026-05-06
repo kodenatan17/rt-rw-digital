@@ -1,0 +1,7 @@
+{
+  "feature": "video_call",
+  "keys": ["FEAT_CALL_BASIC_V1", "RTC_WEBRTC_WRAPPED_V1"],
+  "agents": ["joko-builder", "senior-reviewer", "pakpol-security"],
+  "skills": ["webrtc-skill", "security-skill"],
+  "round": 1
+}

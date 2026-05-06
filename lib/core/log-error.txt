@@ -1,0 +1,1253 @@
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.inactive
+D/SessionLifecycleClient(15184): Sending lifecycle 2 to service
+D/SessionLifecycleService(15184): Activity backgrounding at 30182741
+W/Choreographer(15184): Frame time is 0.026662  now = 30182754762182  timestampNanos = 30182754788844 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+D/AppScoutStateMachine(15184): 15184-ScoutStateMachinecreated
+D/BLASTBufferQueue(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#9](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#9(BLAST Consumer)9](id:3b5000000009,api:0,p:-1,c:15184) disconnect
+D/BLASTBufferQueue(15184): [VRI[MainActivity]#8](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [VRI[MainActivity]#8(BLAST Consumer)8](id:3b5000000008,api:0,p:-1,c:15184) disconnect
+I/GED     (15184): ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 42, oppidx_max 42, oppidx_min 0
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.hidden
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.paused
+E/FileUtils(15184): err write to mi_exception_log
+D/SessionLifecycleClient(15184): Sending lifecycle 1 to service
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.hidden
+D/SessionLifecycleService(15184): Activity foregrounding at 30183114.
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.inactive
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.resumed
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.inactive
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus false
+D/BufferQueueConsumer(15184): [](id:3b500000000a,api:0,p:-1,c:15184) connect: controlledByApp=false
+D/BufferQueueConsumer(15184): [](id:3b500000000b,api:0,p:-1,c:15184) connect: controlledByApp=false
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 38
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 0
+E/gralloc4(15184): Invalid base format! req_base_format = 0x0, req_format = 0x38, type = 0x0
+E/gralloc4(15184): ERROR: Unrecognized and/or unsupported format 0x38 and usage 0xb00
+E/Gralloc4(15184): isSupported(1, 1, 56, 1, ...) failed with 5
+E/GraphicBufferAllocator(15184): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 5
+E/AHardwareBuffer(15184): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -5), handle=0x0
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 38
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 0
+E/gralloc4(15184): Invalid base format! req_base_format = 0x0, req_format = 0x38, type = 0x0
+E/gralloc4(15184): ERROR: Unrecognized and/or unsupported format 0x38 and usage 0xb00
+E/Gralloc4(15184): isSupported(1, 1, 56, 1, ...) failed with 5
+E/GraphicBufferAllocator(15184): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 5
+E/AHardwareBuffer(15184): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -5), handle=0x0
+D/SurfaceView(15184): UPDATE Surface(name=SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity])/@0x85dc727, mIsProjectionMode = false
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [VRI[MainActivity]#10](f:0,a:1) acquireNextBufferLocked size=1080x2400 mFrameNumber=1 applyTransaction=true mTimestamp=30183172758105(auto) mPendingTransactions.size=0 graphicBufferId=65214783422564 transform=0
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#11](f:0,a:1) acquireNextBufferLocked size=1080x2270 mFrameNumber=1 applyTransaction=true mTimestamp=30183186470721(auto) mPendingTransactions.size=0 graphicBufferId=65214783422559 transform=0
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.resumed
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus true
+I/HandWritingStubImpl(15184): refreshLastKeyboardType: 1
+I/HandWritingStubImpl(15184): getCurrentKeyboardType: 1
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.inactive
+D/SessionLifecycleClient(15184): Sending lifecycle 2 to service
+D/SessionLifecycleService(15184): Activity backgrounding at 30184595
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus false
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/GED     (15184): ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 42, oppidx_max 42, oppidx_min 0
+D/BLASTBufferQueue(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#11](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#11(BLAST Consumer)11](id:3b500000000b,api:0,p:-1,c:15184) disconnect
+D/BLASTBufferQueue(15184): [VRI[MainActivity]#10](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [VRI[MainActivity]#10(BLAST Consumer)10](id:3b500000000a,api:0,p:-1,c:15184) disconnect
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.hidden
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.paused
+E/FileUtils(15184): err write to mi_exception_log
+I/FA      (15184): Application backgrounded at: timestamp_millis: 1771929167492
+D/FLTFireMsgReceiver(15184): broadcast received for message
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184): ═══════════════════════════════════════════════════════════════
+I/flutter (15184): [FCM Background] Message received at: 2026-02-24T17:33:02.854219
+I/flutter (15184): [FCM Background] Message ID: 0:1771929182406248%ccfc07b3f9fd7ecd
+I/flutter (15184): [FCM Background] Sent time: 2026-02-24 17:33:02.399
+I/flutter (15184): [FCM Background] Data: {callId: call_624f786917fd110851c27292bd92a0e2, call: START, agoraId: 0, callType: VOICE, agoraToken: 007eJxSYHi71vZPpsS1eRN+WIcLbIrVetm3xbH5x0Wxbx6z0683TBRVYEg2M042M7C0MDc3NTRJNjawNEsyTkuytEwxNjazMLVMiaubm8nBzsCgqsPCwAiFYD5DcmJOTryZkUmauYWZpaF5WoqhoYGFqWGykbmRpVFSiqVRokGqESeDkYWhgYGBiYUxIAAA//9OgSfj}
+I/flutter (15184): [FCM Background] Notification: null
+I/flutter (15184): ═══════════════════════════════════════════════════════════════
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184): [FCM Background] Firebase initialized successfully
+I/flutter (15184): [FCM Background] Delegating to NotificationHandleBackground...
+I/flutter (15184): ═══════════════════════════════════════════════════════════
+I/flutter (15184): [FCM Background] Message ID: 0:1771929182406248%ccfc07b3f9fd7ecd
+I/flutter (15184): [FCM Background] Data: {callId: call_624f786917fd110851c27292bd92a0e2, call: START, agoraId: 0, callType: VOICE, agoraToken: 007eJxSYHi71vZPpsS1eRN+WIcLbIrVetm3xbH5x0Wxbx6z0683TBRVYEg2M042M7C0MDc3NTRJNjawNEsyTkuytEwxNjazMLVMiaubm8nBzsCgqsPCwAiFYD5DcmJOTryZkUmauYWZpaF5WoqhoYGFqWGykbmRpVFSiqVRokGqESeDkYWhgYGBiYUxIAAA//9OgSfj}
+I/flutter (15184): ═══════════════════════════════════════════════════════════
+I/flutter (15184): [FCM Background] Firebase initialized
+I/flutter (15184): [FCM Background] Action: START, Type: VOICE
+I/flutter (15184): [FCM Background] Showing incoming call - isVideo: false
+I/flutter (15184): [FCM Background] Incoming call displayed successfully
+I/flutter (15184): [FCM Background] Processing completed successfully
+D/Ringtone(15184): Successfully created local player
+V/MediaPlayer(15184): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+V/MediaPlayer(15184): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+V/MediaPlayer(15184): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+V/MediaPlayer(15184): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+D/MediaPlayer(15184): _release native called
+D/MediaPlayer(15184): _release native finished
+D/Ringtone(15184): Successfully created local player
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184): [VOIP] Event: Event.actionCallIncoming - ID: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): [Screen] Wake screen error: MissingPluginException(No implementation found for method wakeScreen on channel com.sakura.app/incoming_call)
+I/flutter (15184): [Screen] Show on lock screen error: MissingPluginException(No implementation found for method showOnLockScreen on channel com.sakura.app/incoming_call)
+I/flutter (15184): [Screen] Keep screen on error: MissingPluginException(No implementation found for method keepScreenOn on channel com.sakura.app/screen)
+I/flutter (15184): [VOIP] Incoming call prepared - isVideo: false
+D/libMEOW (15184): meow new tls: 0xb4000078bde79080
+D/libMEOW (15184): applied 1 plugins for [arjaya.telindo.lapas.connect.inbound]:
+D/libMEOW (15184):   plugin 1: [libMEOW_gift.so]:
+D/libMEOW (15184): meow delete tls: 0xb4000078bde79080
+D/MiuiMultiWindowAdapter(15184): MiuiMultiWindowAdapter::getFreeformVideoWhiteListInSystem::LIST_ABOUT_SUPPORT_LANDSCAPE_VIDEO = [com.hunantv.imgo.activity, com.tencent.qqlive, com.qiyi.video, com.hunantv.imgo.activity.inter, com.tencent.qqlivei18n, com.iqiyi.i18n, tv.danmaku.bili]
+D/IS_CTS_MODE(15184): false
+D/MULTI_WINDOW_ENABLED(15184): false
+D/DecorView[](15184): getWindowModeFromSystem  windowmode is 1
+D/AppScoutStateMachine(15184): 15184-ScoutStateMachinecreated
+D/CompatibilityChangeReporter(15184): Compat change id reported: 210923482; UID 10271; state: ENABLED
+D/SessionLifecycleClient(15184): Sending lifecycle 1 to service
+D/SessionLifecycleService(15184): Activity foregrounding at 30200997.
+D/VRI[CallkitIncomingActivity](15184): hardware acceleration = true, forceHwAccelerated = false
+D/DecorView[](15184): getWindowModeFromSystem  windowmode is 1
+D/DecorView[](15184): updateDecorCaptionStatus windowMode is 1
+E/FileUtils(15184): err write to mi_exception_log
+D/SessionLifecycleClient(15184): Sending lifecycle 2 to service
+D/SessionLifecycleService(15184): Activity backgrounding at 30201023
+D/SessionLifecycleClient(15184): Sending lifecycle 1 to service
+D/SessionLifecycleService(15184): Activity foregrounding at 30201027.
+D/BufferQueueConsumer(15184): [](id:3b500000000c,api:0,p:-1,c:15184) connect: controlledByApp=false
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [VRI[CallkitIncomingActivity]#12](f:0,a:1) acquireNextBufferLocked size=1080x2400 mFrameNumber=1 applyTransaction=true mTimestamp=30201143801799(auto) mPendingTransactions.size=0 graphicBufferId=65214783422569 transform=0
+W/Parcel  (15184): Expecting binder but got null!
+I/GED     (15184): ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 42, oppidx_max 42, oppidx_min 0
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus true
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/HandWritingStubImpl(15184): refreshLastKeyboardType: 1
+I/HandWritingStubImpl(15184): getCurrentKeyboardType: 1
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+V/MediaPlayer(15184): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+V/MediaPlayer(15184): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+V/MediaPlayer(15184): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+V/MediaPlayer(15184): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+D/MediaPlayer(15184): _release native called
+D/MediaPlayer(15184): _release native finished
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+D/SessionLifecycleClient(15184): Sending lifecycle 2 to service
+D/SessionLifecycleService(15184): Activity backgrounding at 30204307
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus false
+D/MiuiMultiWindowAdapter(15184): MiuiMultiWindowAdapter::getFreeformVideoWhiteListInSystem::LIST_ABOUT_SUPPORT_LANDSCAPE_VIDEO = [com.hunantv.imgo.activity, com.tencent.qqlive, com.qiyi.video, com.hunantv.imgo.activity.inter, com.tencent.qqlivei18n, com.iqiyi.i18n, tv.danmaku.bili]
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/libMEOW (15184): meow new tls: 0xb4000078f0179140
+D/libMEOW (15184): applied 1 plugins for [arjaya.telindo.lapas.connect.inbound]:
+D/libMEOW (15184):   plugin 1: [libMEOW_gift.so]:
+D/libMEOW (15184): meow delete tls: 0xb4000078f0179140
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/IS_CTS_MODE(15184): false
+D/MULTI_WINDOW_ENABLED(15184): false
+D/DecorView[](15184): getWindowModeFromSystem  windowmode is 1
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [VOIP] Event: Event.actionCallAccept - ID: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): [VOIP] Call accepted: {id: call_624f786917fd110851c27292bd92a0e2, nameCaller: Lapas Connect, avatar: , number: Lapas Connect, type: 0, duration: 30000, textAccept: Accept, textDecline: Decline, extra: {call: START, callId: call_624f786917fd110851c27292bd92a0e2, agoraId: 0, agoraToken: 007eJxSYHi71vZPpsS1eRN+WIcLbIrVetm3xbH5x0Wxbx6z0683TBRVYEg2M042M7C0MDc3NTRJNjawNEsyTkuytEwxNjazMLVMiaubm8nBzsCgqsPCwAiFYD5DcmJOTryZkUmauYWZpaF5WoqhoYGFqWGykbmRpVFSiqVRokGqESeDkYWhgYGBiYUxIAAA//9OgSfj, callType: VOICE, requiresUnlock: false}, missedCallNotification: {id: 0, showNotification: true, count: 1, subtitle: , callbackText: , isShowCallback: true}, callingNotification: {id: null, showNotification: true, subtitle: null, callbackText: null, isShowCallback: true}, android: {isCustomNotification: true, isCustomSmallExNotification: true, ringtonePath: system_ringtone_default, backgroundColor: #0A1929, backgroundUrl: , actionColor: #5FD4A3, textColor: #FFFFFF, incomingCallNotificationChannelName: Incoming Calls, missedCallNot
+I/flutter (15184): [VOIP] Marked call as accepted from CallKit
+I/flutter (15184): [VOIP] Sending START action for callId: call_624f786917fd110851c27292bd92a0e2
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/MiuiMultiWindowAdapter(15184): MiuiMultiWindowAdapter::getFreeformVideoWhiteListInSystem::LIST_ABOUT_SUPPORT_LANDSCAPE_VIDEO = [com.hunantv.imgo.activity, com.tencent.qqlive, com.qiyi.video, com.hunantv.imgo.activity.inter, com.tencent.qqlivei18n, com.iqiyi.i18n, tv.danmaku.bili]
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/libMEOW (15184): meow new tls: 0xb4000078f0179ac0
+D/libMEOW (15184): applied 1 plugins for [arjaya.telindo.lapas.connect.inbound]:
+D/libMEOW (15184):   plugin 1: [libMEOW_gift.so]:
+D/libMEOW (15184): meow delete tls: 0xb4000078f0179ac0
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+W/libc    (15184): Access denied finding property "vendor.debug.forcibly_enable_mtk_ray_tracing"
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(61)] Using the Impeller rendering backend (Vulkan).
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/com.llfbandit.app_links(15184): Intent { act=com.hiennv.flutter_callkit_incoming.ACTION_CALL_ACCEPT cat=[android.intent.category.LAUNCHER] flg=0x24020000 pkg=arjaya.telindo.lapas.connect.inbound cmp=arjaya.telindo.lapas.connect.inbound/.MainActivity (has extras) }
+D/FLTFireContextHolder(15184): received application context.
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/InAppCallManager(15184): PhoneAccount registered.
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/IS_CTS_MODE(15184): false
+D/MULTI_WINDOW_ENABLED(15184): false
+D/DecorView[](15184): getWindowModeFromSystem  windowmode is 1
+W/Activity(15184): PerfMonitor: Slow Operation: Activity arjaya.telindo.lapas.connect.inbound/.MainActivity onCreate took 806ms
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/SessionLifecycleClient(15184): Sending lifecycle 1 to service
+D/SessionLifecycleService(15184): Activity foregrounding at 30205393.
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+W/Activity(15184): PerfMonitor: Slow Operation: Activity arjaya.telindo.lapas.connect.inbound/.MainActivity onResume took 235ms
+D/VRI[MainActivity](15184): hardware acceleration = true, forceHwAccelerated = false
+D/DecorView[](15184): getWindowModeFromSystem  windowmode is 1
+D/DecorView[](15184): updateDecorCaptionStatus windowMode is 1
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184):
+I/flutter (15184): ╔╣ Request ║ POST
+I/flutter (15184): ║  https://prison.villaagroindah.com/api/inbound/api/v1/call
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): ╔ Headers
+I/flutter (15184): ╟ content-type: application/json
+I/flutter (15184): ╟ Authorization:
+I/flutter (15184): ║ Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJhZ29yYV9pZCI6MjgxMDAwNDgzLC
+I/flutter (15184): ║ Jpc3MiOiJwcmlzb24tYmFja2VuZCIsImV4cCI6MTc3MTk0NTE0MCwiaWF0IjoxNzcxODU4NzQwfQ.Z5n1g4zyLMSM1
+I/flutter (15184): ║ XgV1glrMqFNPvrMw06VxboiW2Mq4do
+I/flutter (15184): ╟ X-Device-Type: ANDROID
+I/flutter (15184): ╟ contentType: application/json
+I/flutter (15184): ╟ responseType: ResponseType.json
+I/flutter (15184): ╟ followRedirects: true
+I/flutter (15184): ╟ connectTimeout: 0:00:20.000000
+I/flutter (15184): ╟ receiveTimeout: 0:00:20.000000
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): ╔ Body
+I/flutter (15184): ╟ type: START
+I/flutter (15184): ╟ callId: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): ║ {type: START, callId: call_624f786917fd110851c27292bd92a0e2}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/Choreographer(15184): Skipped 71 frames!  The application may be doing too much work on its main thread.
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BufferQueueConsumer(15184): [](id:3b500000000d,api:0,p:-1,c:15184) connect: controlledByApp=false
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/SurfaceView(15184): UPDATE null, mIsCastMode = false
+I/OpenGLRenderer(15184): Davey! duration=1206ms; Flags=0, FrameTimelineVsyncId=1421763, IntendedVsync=30204484023022, Vsync=30205666183885, InputEventId=0, HandleInputStart=30205672172260, AnimationStart=30205672176645, PerformTraversalsStart=30205673288876, DrawStart=30205673503414, FrameDeadline=30204504023022, FrameInterval=30205671970799, FrameStartTime=16594728, SyncQueued=30205674539337, SyncStart=30205675232953, IssueDrawCommandsStart=30205675371337, SwapBuffers=30205682124876, FrameCompleted=30205690776030, DequeueBufferDuration=29539, QueueBufferDuration=209000, GpuCompleted=30205690776030, SwapBuffersCompleted=30205683542414, DisplayPresentTime=30203684321183, CommandSubmissionCompleted=30205682124876,
+D/BufferQueueConsumer(15184): [](id:3b500000000e,api:0,p:-1,c:15184) connect: controlledByApp=false
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 38
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 0
+E/gralloc4(15184): Invalid base format! req_base_format = 0x0, req_format = 0x38, type = 0x0
+E/gralloc4(15184): ERROR: Unrecognized and/or unsupported format 0x38 and usage 0xb00
+E/Gralloc4(15184): isSupported(1, 1, 56, 1, ...) failed with 5
+E/GraphicBufferAllocator(15184): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 5
+E/AHardwareBuffer(15184): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -5), handle=0x0
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 38
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 0
+E/gralloc4(15184): Invalid base format! req_base_format = 0x0, req_format = 0x38, type = 0x0
+E/gralloc4(15184): ERROR: Unrecognized and/or unsupported format 0x38 and usage 0xb00
+E/Gralloc4(15184): isSupported(1, 1, 56, 1, ...) failed with 5
+E/GraphicBufferAllocator(15184): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 5
+E/AHardwareBuffer(15184): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -5), handle=0x0
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+E/FileUtils(15184): err write to mi_exception_log
+D/SurfaceView(15184): UPDATE Surface(name=SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity])/@0x6b1fc7, mIsProjectionMode = false
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/TRuntime.CctTransportBackend(15184): Making request to: https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/Choreographer(15184): Skipped 41 frames!  The application may be doing too much work on its main thread.
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184):
+I/flutter (15184): ╔╣ Response ║ POST ║ Status: 200 OK
+I/flutter (15184): ║  https://prison.villaagroindah.com/api/inbound/api/v1/call
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): ╔ Body
+I/flutter (15184): ║
+I/flutter (15184): ║    {
+I/flutter (15184): ║         status: {code: 0, message: Success Submit Call},
+I/flutter (15184): ║         data: {isSuccess: true}
+I/flutter (15184): ║    }
+I/flutter (15184): ║
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): [Init] Environment initialized
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [Init] Firebase initialized
+I/flutter (15184): [Init] Crashlytics configured
+W/FLTFireMsgService(15184): Attempted to start a duplicate background isolate. Returning...
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [VOIP] Action sent: START for call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): [Screen] Keep screen on error: MissingPluginException(No implementation found for method keepScreenOn on channel com.sakura.app/screen)
+I/flutter (15184): [Call] Navigating to call screen: {agoraToken: 007eJxSYHi71vZPpsS1eRN+WIcLbIrVetm3xbH5x0Wxbx6z0683TBRVYEg2M042M7C0MDc3NTRJNjawNEsyTkuytEwxNjazMLVMiaubm8nBzsCgqsPCwAiFYD5DcmJOTryZkUmauYWZpaF5WoqhoYGFqWGykbmRpVFSiqVRokGqESeDkYWhgYGBiYUxIAAA//9OgSfj, agoraId: 281000483, callId: call_624f786917fd110851c27292bd92a0e2, typeCall: VOICE, callAction: START}
+[GoRouter] going to /call?agoraToken=007eJxSYHi71vZPpsS1eRN%2BWIcLbIrVetm3xbH5x0Wxbx6z0683TBRVYEg2M042M7C0MDc3NTRJNjawNEsyTkuytEwxNjazMLVMiaubm8nBzsCgqsPCwAiFYD5DcmJOTryZkUmauYWZpaF5WoqhoYGFqWGykbmRpVFSiqVRokGqESeDkYWhgYGBiYUxIAAA%2F%2F9OgSfj&agoraId=281000483&callId=call_624f786917fd110851c27292bd92a0e2&typeCall=VOICE&callAction=START
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [Init] 4 notification channels created
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [Init] FlutterLocalNotificationsPlugin initialized
+I/flutter (15184): [FCM] Current token: dAvb-K44R4W4P1SePzodPq:APA91bEVFJck1W03zzGNvdqHP2KKkq4IAxs_94T-1t-ulYjpznRqvo0TpD-QB6xor1-FsopAB3Rr-ORFl6uZfCzt_fH6LyCQCGSsozzAAr3xScDrH3lFpHg
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [Init] App initialization complete
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [FCM] Token refresh listener registered
+I/flutter (15184): [FCM] Foreground message listener registered
+I/flutter (15184): ═══════════════════════════════════════════════════════════════
+I/flutter (15184): [FCM] ⚠️  BATTERY OPTIMIZATION CHECK
+I/flutter (15184): [FCM] Current status: LIKELY ENABLED (not verified)
+I/flutter (15184): [FCM]
+I/flutter (15184): [FCM] ❌ Battery optimization will cause:
+I/flutter (15184): [FCM]    • FCM delay 5-30+ minutes
+I/flutter (15184): [FCM]    • Notifications batched together
+I/flutter (15184): [FCM]    • App killed in background
+I/flutter (15184): [FCM]
+I/flutter (15184): [FCM] ✅ TO FIX:
+I/flutter (15184): [FCM]    Settings → Apps → This App
+I/flutter (15184): [FCM]    → Battery → Unrestricted / Don't optimize
+I/flutter (15184): ═══════════════════════════════════════════════════════════════
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#14](f:0,a:1) acquireNextBufferLocked size=1080x2270 mFrameNumber=1 applyTransaction=true mTimestamp=30207733399337(auto) mPendingTransactions.size=0 graphicBufferId=65214783422580 transform=0
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/RootBeer(15184): LOOKING FOR BINARY: /data/local/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /data/local/bin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /data/local/xbin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /sbin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /su/bin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /system/bin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /system/bin/.ext/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /system/bin/failsafe/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /system/sd/xbin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /system/usr/we-need-root/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /system/xbin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /cache/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /data/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /dev/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /product/bin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /apex/com.android.runtime/bin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /apex/com.android.art/bin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /system_ext/bin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /odm/bin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /vendor/bin/su Absent :(
+I/RootBeer(15184): LOOKING FOR BINARY: /vendor/xbin/su Absent :(
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [VRI[MainActivity]#13](f:0,a:1) acquireNextBufferLocked size=1080x2400 mFrameNumber=1 applyTransaction=true mTimestamp=30207860380876(auto) mPendingTransactions.size=0 graphicBufferId=65214783422585 transform=0
+W/Parcel  (15184): Expecting binder but got null!
+[GoRouter] Full paths for routes:
+           ├─/splash (SplashScreen)
+           ├─/login (LoginScreen)
+           ├─/verify-otp (VerificationScreen)
+           ├─/complete-profile (CompleteScreen)
+           ├─/home (BlocProvider<HomeCubit>)
+           └─/call (CallScreen)
+           known full paths for route names:
+             /splash => /splash
+             /login => /login
+             /verify-otp => /verify-otp
+             /complete-profile => /complete-profile
+             /home => /home
+             /call => /call
+[GoRouter] setting initial location /splash
+I/TRuntime.CctTransportBackend(15184): Status Code: 200
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [VOIP] Service initialized
+I/flutter (15184): [VOIP] Service initialized successfully
+I/Choreographer(15184): Skipped 32 frames!  The application may be doing too much work on its main thread.
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [Router] Pending call detected, redirecting to call screen
+[GoRouter] redirecting to RouteMatchList#f43bd(uri: /call?callId=call_624f786917fd110851c27292bd92a0e2&agoraToken=007eJxSYHi71vZPpsS1eRN%2BWIcLbIrVetm3xbH5x0Wxbx6z0683TBRVYEg2M042M7C0MDc3NTRJNjawNEsyTkuytEwxNjazMLVMiaubm8nBzsCgqsPCwAiFYD5DcmJOTryZkUmauYWZpaF5WoqhoYGFqWGykbmRpVFSiqVRokGqESeDkYWhgYGBiYUxIAAA%2F%2F9OgSfj&uid=0&typeCall=VOICE&callAction=START, matches: [RouteMatch#53651(route: GoRoute#0d44f(name: "/call", path: "/call"))])
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus true
+I/HandWritingStubImpl(15184): refreshLastKeyboardType: 1
+I/HandWritingStubImpl(15184): getCurrentKeyboardType: 1
+[GoRouter] Using MaterialApp configuration
+I/flutter (15184): 📞 CallScreen: Initializing call flow
+I/flutter (15184): 📞 CallScreen: callAction=START, typeCall=VOICE
+I/flutter (15184): [VOIP] Active call set: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): 📞 CallScreen: Background CallKit accept → direct initialize
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): 📞 VoiceCallStatusBloc: Skip START action for CallKit accepted call: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): AgoraHelper: Starting engine initialization...
+I/Choreographer(15184): Skipped 57 frames!  The application may be doing too much work on its main thread.
+D/DecorView[](15184): getWindowModeFromSystem  windowmode is 1
+D/DecorView[](15184): updateDecorCaptionStatus windowMode is 1
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/OpenGLRenderer(15184): Davey! duration=957ms; Flags=0, FrameTimelineVsyncId=1423988, IntendedVsync=30208402430315, Vsync=30209348729495, InputEventId=0, HandleInputStart=30209355161491, AnimationStart=30209355164338, PerformTraversalsStart=30209355723414, DrawStart=30209355892953, FrameDeadline=30208439032055, FrameInterval=30209355043030, FrameStartTime=16601740, SyncQueued=30209356291953, SyncStart=30209356318491, IssueDrawCommandsStart=30209356426491, SwapBuffers=30209358237184, FrameCompleted=30209359534491, DequeueBufferDuration=31308, QueueBufferDuration=343462, GpuCompleted=30209359534491, SwapBuffersCompleted=30209359266414, DisplayPresentTime=30204149265876, CommandSubmissionCompleted=30209358237184,
+I/OpenGLRenderer(15184): Davey! duration=970ms; Flags=0, FrameTimelineVsyncId=1423988, IntendedVsync=30208402430315, Vsync=30209348729495, InputEventId=0, HandleInputStart=30209355161491, AnimationStart=30209355164338, PerformTraversalsStart=30209355723414, DrawStart=30209368504261, FrameDeadline=30208422430315, FrameInterval=30209355043030, FrameStartTime=16601740, SyncQueued=30209368835107, SyncStart=30209368969184, IssueDrawCommandsStart=30209369010107, SwapBuffers=30209372347414, FrameCompleted=30209373366722, DequeueBufferDuration=2366846, QueueBufferDuration=205000, GpuCompleted=30209373366722, SwapBuffersCompleted=30209373047953, DisplayPresentTime=524561404808, CommandSubmissionCompleted=30209372347414,
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [VRI[CallkitIncomingActivity]#12](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [VRI[CallkitIncomingActivity]#12(BLAST Consumer)12](id:3b500000000c,api:0,p:-1,c:15184) disconnect
+D/View    (15184): [Warning] assignParent to null: this = DecorView@3ccb2e1[CallkitIncomingActivity]
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [Screen] Show on lock screen error: MissingPluginException(No implementation found for method showOnLockScreen on channel com.sakura.app/incoming_call)
+W/OnBackInvokedCallback(15184): OnBackInvokedCallback is not enabled for the application.
+W/OnBackInvokedCallback(15184): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+I/flutter (15184): [Screen] Keep screen on error: MissingPluginException(No implementation found for method keepScreenOn on channel com.sakura.app/screen)
+I/flutter (15184): Permissions already granted, skipping request
+I/flutter (15184): Agora: Permission check took 258ms
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:12.521][15184][I][iris_logger.cc:157] reset logger to /agora-iris.log
+I/spdlog  (15184): [2026-02-24 17:33:12.521][15184][I][iris_logger.cc:159] iris version: 4.5.2-build.1 commit: 4eee5cf6a97f30848b12b95873f7a3ba72e710cf build: 34812
+I/spdlog  (15184): [2026-02-24 17:33:12.527][15184][I][iris_logger.cc:157] reset logger to /storage/emulated/0/Android/data/arjaya.telindo.lapas.connect.inbound/files/agora-iris.log
+I/spdlog  (15184): [2026-02-24 17:33:12.527][15184][I][iris_logger.cc:159] iris version: 4.5.2-build.1 commit: 4eee5cf6a97f30848b12b95873f7a3ba72e710cf build: 34812
+I/spdlog  (15184): [2026-02-24 17:33:12.615][15184][I][iris_jni_rtc.cc:116] loaded extensions: agora_ai_echo_cancellation_extension,agora_ai_echo_cancellation_ll_extension,agora_ai_noise_suppression_extension,agora_ai_noise_suppression_ll_extension,agora_audio_beauty_extension,agora_clear_vision_extension,agora_content_inspect_extension,agora_face_capture_extension,agora_face_detection_extension,agora_lip_sync_extension,agora_screen_capture_extension,agora_segmentation_extension,agora_spatial_audio_extension,agora_video_av1_decoder_extension,agora_video_av1_encoder_extension,agora_video_decoder_extension,agora_video_encoder_extension,agora_video_quality_analyzer_extension,
+E/FileUtils(15184): err write to mi_exception_log
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:15.983][15971][I][iris_rtc_api_engine.cc:436] api name RtcEngine_initialize_0320339 params "{"context":{"appId":"c63***************59d","channelProfile":0}}"
+I/spdlog  (15184): [2026-02-24 17:33:15.983][15971][I][iris_logger.cc:157] reset logger to /storage/emulated/0/Android/data/arjaya.telindo.lapas.connect.inbound/files/agora-iris.log
+I/spdlog  (15184): [2026-02-24 17:33:15.983][15971][I][iris_logger.cc:159] iris version: 4.5.2-build.1 commit: 4eee5cf6a97f30848b12b95873f7a3ba72e710cf build: 34812
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/CompatibilityChangeReporter(15184): Compat change id reported: 147600208; UID 10271; state: ENABLED
+D/CommonUtility(15184): registerSystemEventListener: io.agora.utils2.internal.RtcSystemEventListener
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/CommonUtility(15184): onNetworkChange: io.agora.utils2.internal.RtcSystemEventListener
+D/RtcSystemEventListener(15184): onNetworkChange:
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+W/connect.inbound(15184): Accessing hidden method Landroid/media/AudioManager;->getDevicesForStream(I)I (unsupported, reflection, allowed)
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/libMEOW (15184): meow new tls: 0xb400007814ce9ac0
+D/libMEOW (15184): applied 1 plugins for [arjaya.telindo.lapas.connect.inbound]:
+D/libMEOW (15184):   plugin 1: [libMEOW_gift.so]:
+I/GED     (15184): [GT]_get_procNameprocess pid(15184)
+I/GED     (15184): [GT]_getprocess name(arjaya.telindo.lapas.connect.inbound)
+I/connect.inbound(15184): [GT] ret(1) gt_status(00000000) aniso_debug_level(0) gt_aniso_max_level(16) ani so mask(00000001) tri mask(00000002)
+I/GED     (15184): [GT]_get_procNameprocess pid(15184)
+I/GED     (15184): [GT]_getprocess name(arjaya.telindo.lapas.connect.inbound)
+I/connect.inbound(15184): [GT] ret(1) gt_status(00000000) aniso_debug_level(0) gt_aniso_max_level(16) ani so mask(00000001) tri mask(00000002)
+I/GED     (15184): [GT]_get_procNameprocess pid(15184)
+I/GED     (15184): [GT]_getprocess name(arjaya.telindo.lapas.connect.inbound)
+I/connect.inbound(15184): [GT] ret(1) gt_status(00000000) aniso_debug_level(0) gt_aniso_max_level(16) ani so mask(00000001) tri mask(00000002)
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+W/AudioCapabilities(15184): Unsupported mime audio/x-adpcm-dvi-ima
+W/AudioCapabilities(15184): Unsupported mime audio/x-adpcm-dvi-ima
+W/AudioCapabilities(15184): Unsupported mime audio/x-adpcm-ms
+W/AudioCapabilities(15184): Unsupported mime audio/x-adpcm-ms
+W/AudioCapabilities(15184): Unsupported mime audio/alac
+W/AudioCapabilities(15184): Unsupported mime audio/alac
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+W/VideoCapabilities(15184): Unsupported mime image/vnd.android.heic
+W/VideoCapabilities(15184): Unsupported mime image/vnd.android.heic
+W/VideoCapabilities(15184): Unsupported mime image/vnd.android.heic
+W/VideoCapabilities(15184): Unsupported mime image/vnd.android.heic
+W/VideoCapabilities(15184): Unsupported mime video/x-ms-wmv
+W/VideoCapabilities(15184): Unsupported mime video/x-ms-wmv
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err open mi_exception_log errno=2
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:16.258][15971][I][iris_rtc_rendering_impl.cc:64] initialize rendering
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:16.288][15971][I][iris_rtc_rendering_impl.cc:49] register video frame renderer observer 12970367446313159960
+I/spdlog  (15184): [2026-02-24 17:33:16.288][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_initialize_0320339 result 0 outdata {"result":0}
+I/connect.inbound(15184): Background concurrent copying GC freed 62884(3573KB) AllocSpace objects, 65(2132KB) LOS objects, 49% free, 7303KB/14MB, paused 351us,60us total 137.690ms
+I/spdlog  (15184): [2026-02-24 17:33:16.291][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_setAppType params "{"appType":4}"
+D/MediaPlayer(15184): finalize() native_finalize called
+D/MediaPlayer(15184): finalize() native_finalize finished
+D/MediaPlayer(15184): finalize() native_finalize called
+D/MediaPlayer(15184): finalize() native_finalize finished
+I/spdlog  (15184): [2026-02-24 17:33:16.292][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_setAppType result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): Agora: Engine creation took 3995ms
+I/spdlog  (15184): [2026-02-24 17:33:16.302][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableAudio params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:16.302][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableAudio result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:33:16.305][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableVideo params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:16.306][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableVideo result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:33:16.311][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_setVideoEncoderConfiguration_89677d8 params "{"config":{"dimensions":{"width":640,"height":480},"frameRate":15,"bitrate":0,"minBitrate":-1,"orientationMode":0,"degradationPreference":2,"mirrorMode":0}}"
+I/spdlog  (15184): [2026-02-24 17:33:16.312][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_setVideoEncoderConfiguration_89677d8 result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:16.319][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableAudioVolumeIndication_39794a0 params "{"interval":200,"smooth":3,"reportVad":false}"
+I/spdlog  (15184): [2026-02-24 17:33:16.323][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableAudioVolumeIndication_39794a0 result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:16.333][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_setClientRole_3426fa6 params "{"role":1,"options":null}"
+I/spdlog  (15184): [2026-02-24 17:33:16.334][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_setClientRole_3426fa6 result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:33:16.336][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableLocalVideo_5039d15 params "{"enabled":true}"
+I/spdlog  (15184): [2026-02-24 17:33:16.336][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableLocalVideo_5039d15 result 0 outdata {"result":0}
+I/flutter (15184): Agora Engine initialized successfully in 4291ms
+I/flutter (15184): AgoraHelper: Engine initialized in 4297ms
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): 📞 VoiceCallStatusBloc (CallKit): Retrieved agoraId from storage: 281000483 (type: int)
+I/flutter (15184): 🔌 Agora: All previous event handlers cleared
+I/flutter (15184): 🔌 Agora: New event handler registered (total tracked: 1)
+I/spdlog  (15184): [2026-02-24 17:33:16.555][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_registerEventHandler_5fc0465 params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:16.555][15971][I][iris_rtc_api_engine.cc:490] api name RtcEngine_registerEventHandler_5fc0465 extened params "{"event":12970367442770592608}"
+I/spdlog  (15184): [2026-02-24 17:33:16.556][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_registerEventHandler_5fc0465 result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:33:16.557][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_disableVideo params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:16.563][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_disableVideo result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:16.625][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableAudio params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:16.626][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableAudio result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:16.642][15971][I][iris_rtc_api_engine.cc:436] api name RtcEngine_joinChannel_cdbb747 params "{"token":"007e***************gSfj","channelId":"call_624f786917fd110851c27292bd92a0e2","uid":281000483,"options":{"publishCameraTrack":false,"publishMicrophoneTrack":true,"autoSubscribeAudio":true,"autoSubscribeVideo":false,"clientRoleType":1,"channelProfile":0}}"
+I/spdlog  (15184): [2026-02-24 17:33:16.654][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_joinChannel_cdbb747 result 0 outdata {"result":0}
+D/connect.inbound(15184): PlayerBase::PlayerBase()
+D/connect.inbound(15184): TrackPlayerBase::TrackPlayerBase()
+I/libOpenSLES(15184): Emulating old channel mask behavior (ignoring positional mask 0x4, using default mask 0x1 based on channel count of 1)
+D/AudioTrack(15184): INSP: type=audio,case=1,set=0xb4000078da311600,stream_type=0,sample_rate=16000,format=0x1,channel_mask=0x1,frame_count=0,flags=0x104,notification_frames=-2,session_id=2009,transfer_type=0,uid=-1,pid=-1
+D/AudioTrack(15184): getCallingPackageName packagename_processed is arjaya.telindo.lapas.connect.inbound
+D/AudioTrack(15184): set: mPowerTrackStatus=0
+I/flutter (15184): Joined voice call: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): AgoraHelper: Voice call started - call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): Connection state changed: ConnectionStateType.connectionStateConnecting, reason: ConnectionChangedReasonType.connectionChangedConnecting
+I/flutter (15184): 🔌 Voice Connection State: ConnectionStateType.connectionStateConnecting, Reason: ConnectionChangedReasonType.connectionChangedConnecting
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/AudioTrack(15184): createTrack_l(334): 0xb4000078da311600, mCblk = 0x7b6eee8000, mLatency = 85, mAfLatency = 42, frameCount = 690, mSampleRate = 16000, mFlags = 0, mReqFrameCount = 690, mNotificationFramesAct = 230
+D/AudioTrack(15184): setMarkerPosition(334): 0xb4000078da311600, marker = 0
+D/AudioTrack(15184): setPositionUpdatePeriod(334): 0xb4000078da311600, updatePeriod = 0
+D/AudioTrack(15184): start(334): 0xb4000078da311600, prior state:STATE_STOPPED
+E/FileUtils(15184): err open mi_exception_log errno=2
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+W/libOpenSLES(15184): Conversion from OpenSL ES positional channel mask 0x4 to Android mask 0 loses channels
+I/libOpenSLES(15184): Emulating old channel mask behavior (ignoring positional mask 0x4, using default mask 0x10 based on channel count of 1)
+D/AudioRecord(15184): set(): 0xb4000078e247bb00, inputSource 7, sampleRate 16000, format 0x1, channelMask 0x10, frameCount 0, notificationFrames 0, sessionId 0, transferType 1, flags 0, attributionSource AttributionSourceState{pid: 15184, uid: 10271, packageName: (null), attributionTag: (null), token: , renouncedPermissions: (null), next: []} uid 10271, pid 15184,isIsolated 0
+D/AudioRecord(15184): PackageName[arjaya.telindo.lapas.connect.inbound], uid[10271]
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/AudioRecord(15184): PackageName[arjaya.telindo.lapas.connect.inbound], uid[10271]
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/AudioRecord(15184): openRecord_l: 0xb4000078e247bb00, mCblk = 0x7b5ec73900
+D/AudioRecord(15184): start(336): 0xb4000078e247bb00, sync event 0 trigger session 0
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/AudioRecord(15184): start(336): return status 0
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): ✅ Local user 281000483 joined channel: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): ⚠️ NOTE: If localUid differs from your expected uid, the token was likely generated for a different uid or uid=0
+I/flutter (15184): Connection state changed: ConnectionStateType.connectionStateConnected, reason: ConnectionChangedReasonType.connectionChangedJoinSuccess
+I/flutter (15184): 🔌 Voice Connection State: ConnectionStateType.connectionStateConnected, Reason: ConnectionChangedReasonType.connectionChangedJoinSuccess
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): Remote user 831730199 joined
+I/flutter (15184): 📞 VoiceCallStatusBloc: Remote user joined, safety timer cancelled
+I/flutter (15184): 📞 VoiceCallStatusBloc: Updated CallKit notification to Connected
+I/flutter (15184): [VOIP] Event: Event.actionCallConnected - ID: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): [VOIP] Unhandled event: Event.actionCallConnected
+I/flutter (15184): [VOIP] Event: Event.actionCallConnected - ID: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): [VOIP] Unhandled event: Event.actionCallConnected
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): 📞 VoiceCallStatusBloc: Starting safety timer (5 seconds)
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/SessionLifecycleClient(15184): Sending lifecycle 2 to service
+D/SessionLifecycleService(15184): Activity backgrounding at 30219694
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.inactive
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus false
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#14](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#14(BLAST Consumer)14](id:3b500000000e,api:0,p:-1,c:15184) disconnect
+D/BLASTBufferQueue(15184): [VRI[MainActivity]#13](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [VRI[MainActivity]#13(BLAST Consumer)13](id:3b500000000d,api:0,p:-1,c:15184) disconnect
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.hidden
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.paused
+D/CommonUtility(15184): onForegroundChanged() false
+I/FA      (15184): Application backgrounded at: timestamp_millis: 1771929202494
+D/com.llfbandit.app_links(15184): Intent { cat=[android.intent.category.LAUNCHER] flg=0x34420000 pkg=arjaya.telindo.lapas.connect.inbound cmp=arjaya.telindo.lapas.connect.inbound/.MainActivity (has extras) }
+D/SessionLifecycleClient(15184): Sending lifecycle 1 to service
+D/SessionLifecycleService(15184): Activity foregrounding at 30222873.
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.hidden
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.inactive
+D/AppScoutStateMachine(15184): 15184-ScoutStateMachinecreated
+D/BufferQueueConsumer(15184): [](id:3b500000000f,api:0,p:-1,c:15184) connect: controlledByApp=false
+D/BufferQueueConsumer(15184): [](id:3b5000000010,api:0,p:-1,c:15184) connect: controlledByApp=false
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 38
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 0
+E/gralloc4(15184): Invalid base format! req_base_format = 0x0, req_format = 0x38, type = 0x0
+E/gralloc4(15184): ERROR: Unrecognized and/or unsupported format 0x38 and usage 0xb00
+E/Gralloc4(15184): isSupported(1, 1, 56, 1, ...) failed with 5
+E/GraphicBufferAllocator(15184): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 5
+E/AHardwareBuffer(15184): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -5), handle=0x0
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 38
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 0
+E/gralloc4(15184): Invalid base format! req_base_format = 0x0, req_format = 0x38, type = 0x0
+E/gralloc4(15184): ERROR: Unrecognized and/or unsupported format 0x38 and usage 0xb00
+E/Gralloc4(15184): isSupported(1, 1, 56, 1, ...) failed with 5
+E/GraphicBufferAllocator(15184): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 5
+E/AHardwareBuffer(15184): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -5), handle=0x0
+D/SurfaceView(15184): UPDATE Surface(name=SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity])/@0x5463405, mIsProjectionMode = false
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [VRI[MainActivity]#15](f:0,a:1) acquireNextBufferLocked size=1080x2400 mFrameNumber=1 applyTransaction=true mTimestamp=30223016148877(auto) mPendingTransactions.size=0 graphicBufferId=65214783422602 transform=0
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#16](f:0,a:1) acquireNextBufferLocked size=1080x2270 mFrameNumber=1 applyTransaction=true mTimestamp=30223397380261(auto) mPendingTransactions.size=0 graphicBufferId=65214783422597 transform=0
+I/flutter (15184): 📞 CallScreen: Initializing call flow
+I/flutter (15184): 📞 CallScreen: callAction=START, typeCall=VOICE
+I/flutter (15184): [VOIP] Active call set: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): 📞 CallScreen: Background CallKit accept → direct initialize
+I/flutter (15184): 📞 VoiceCallStatusBloc: Skip START action for CallKit accepted call: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): AgoraHelper: Starting engine initialization...
+I/Choreographer(15184): Skipped 31 frames!  The application may be doing too much work on its main thread.
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [Screen] Show on lock screen error: MissingPluginException(No implementation found for method showOnLockScreen on channel com.sakura.app/incoming_call)
+W/OnBackInvokedCallback(15184): OnBackInvokedCallback is not enabled for the application.
+W/OnBackInvokedCallback(15184): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.resumed
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus true
+I/HandWritingStubImpl(15184): refreshLastKeyboardType: 1
+I/HandWritingStubImpl(15184): getCurrentKeyboardType: 1
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): [Screen] Keep screen on error: MissingPluginException(No implementation found for method keepScreenOn on channel com.sakura.app/screen)
+I/flutter (15184): Permissions already granted, skipping request
+I/flutter (15184): Agora: Permission check took 194ms
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/CommonUtility(15184): onForegroundChanged() true
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+W/Choreographer(15184): Frame time is 3.46E-4  now = 30224343760646  timestampNanos = 30224343760992 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:30.985][16096][I][iris_rtc_api_engine.cc:436] api name RtcEngine_initialize_0320339 params "{"context":{"appId":"c63***************59d","channelProfile":0}}"
+I/spdlog  (15184): [2026-02-24 17:33:30.985][16096][I][iris_rtc_rendering_impl.cc:64] initialize rendering
+I/spdlog  (15184): [2026-02-24 17:33:30.986][16096][I][iris_rtc_rendering_impl.cc:49] register video frame renderer observer 12970367445972402456
+I/spdlog  (15184): [2026-02-24 17:33:30.986][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_initialize_0320339 result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:30.997][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_setAppType params "{"appType":4}"
+I/spdlog  (15184): [2026-02-24 17:33:30.997][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_setAppType result 0 outdata {"result":0}
+I/flutter (15184): Agora: Engine creation took 4629ms
+I/spdlog  (15184): [2026-02-24 17:33:31.003][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableAudio params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:31.003][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableAudio result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:33:31.010][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableVideo params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:31.011][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableVideo result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:31.022][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_setVideoEncoderConfiguration_89677d8 params "{"config":{"dimensions":{"width":640,"height":480},"frameRate":15,"bitrate":0,"minBitrate":-1,"orientationMode":0,"degradationPreference":2,"mirrorMode":0}}"
+I/spdlog  (15184): [2026-02-24 17:33:31.022][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_setVideoEncoderConfiguration_89677d8 result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:31.034][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableAudioVolumeIndication_39794a0 params "{"interval":200,"smooth":3,"reportVad":false}"
+I/spdlog  (15184): [2026-02-24 17:33:31.035][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableAudioVolumeIndication_39794a0 result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:33:31.038][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_setClientRole_3426fa6 params "{"role":1,"options":null}"
+I/spdlog  (15184): [2026-02-24 17:33:31.040][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_setClientRole_3426fa6 result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:31.053][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableLocalVideo_5039d15 params "{"enabled":true}"
+I/spdlog  (15184): [2026-02-24 17:33:31.053][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableLocalVideo_5039d15 result 0 outdata {"result":0}
+I/flutter (15184): Agora Engine initialized successfully in 4884ms
+I/flutter (15184): AgoraHelper: Engine initialized in 4895ms
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): 📞 VoiceCallStatusBloc (CallKit): Retrieved agoraId from storage: 281000483 (type: int)
+I/flutter (15184): 🔌 Agora: All previous event handlers cleared
+I/flutter (15184): 🔌 Agora: New event handler registered (total tracked: 1)
+I/spdlog  (15184): [2026-02-24 17:33:31.164][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_registerEventHandler_5fc0465 params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:31.164][16096][I][iris_rtc_api_engine.cc:490] api name RtcEngine_registerEventHandler_5fc0465 extened params "{"event":12970367442336125440}"
+I/spdlog  (15184): [2026-02-24 17:33:31.164][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_registerEventHandler_5fc0465 result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:33:31.166][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_disableVideo params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:31.166][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_disableVideo result 0 outdata {"result":0}
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/spdlog  (15184): [2026-02-24 17:33:31.192][16096][I][iris_rtc_api_engine.cc:438] api name RtcEngine_enableAudio params "{}"
+I/spdlog  (15184): [2026-02-24 17:33:31.192][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_enableAudio result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:33:31.254][16096][I][iris_rtc_api_engine.cc:436] api name RtcEngine_joinChannel_cdbb747 params "{"token":"007e***************gSfj","channelId":"call_624f786917fd110851c27292bd92a0e2","uid":281000483,"options":{"publishCameraTrack":false,"publishMicrophoneTrack":true,"autoSubscribeAudio":true,"autoSubscribeVideo":false,"clientRoleType":1,"channelProfile":0}}"
+I/spdlog  (15184): [2026-02-24 17:33:31.255][16096][I][iris_rtc_api_engine.cc:504] api name RtcEngine_joinChannel_cdbb747 result 0 outdata {"result":-17}
+I/flutter (15184): Error joining voice call: AgoraRtcException(-17, null)
+I/flutter (15184): AgoraHelper: Error starting voice call - AgoraRtcException(-17, null)
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/flutter (15184): Error initializing voice call from CallKit: AgoraRtcException(-17, null)
+I/flutter (15184): ⚠️ Voice call error (logged only, not ending): AgoraRtcException(-17, null)
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+I/TRuntime.CctTransportBackend(15184): Making request to: https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog
+I/TRuntime.CctTransportBackend(15184): Status Code: 200
+I/flutter (15184): Remote user 831730199 left channel
+I/flutter (15184): 📞 VoiceCallStatusBloc: Processing UserLeft event (first time)
+I/flutter (15184): 📞 VoiceCallStatusBloc: Processing END event
+I/flutter (15184): Remote user 831730199 left channel
+I/flutter (15184): 📞 VoiceCallStatusBloc: Processing UserLeft event (first time)
+I/flutter (15184): 📞 VoiceCallStatusBloc: Already ending/ended - skipping duplicate END
+I/flutter (15184):
+I/flutter (15184): ╔╣ Request ║ POST
+I/flutter (15184): ║  https://prison.villaagroindah.com/api/inbound/api/v1/call
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): ╔ Headers
+I/flutter (15184): ╟ content-type: application/json
+I/flutter (15184): ╟ Authorization:
+I/flutter (15184): ║ Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJhZ29yYV9pZCI6MjgxMDAwNDgzLC
+I/flutter (15184): ║ Jpc3MiOiJwcmlzb24tYmFja2VuZCIsImV4cCI6MTc3MTk0NTE0MCwiaWF0IjoxNzcxODU4NzQwfQ.Z5n1g4zyLMSM1
+I/flutter (15184): ║ XgV1glrMqFNPvrMw06VxboiW2Mq4do
+I/flutter (15184): ╟ X-Device-Type: ANDROID
+I/flutter (15184): ╟ contentType: application/json
+I/flutter (15184): ╟ responseType: ResponseType.json
+I/flutter (15184): ╟ followRedirects: true
+I/flutter (15184): ╟ connectTimeout: 0:00:20.000000
+I/flutter (15184): ╟ receiveTimeout: 0:00:20.000000
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): ╔ Body
+I/flutter (15184): ╟ type: END
+I/flutter (15184): ╟ callId: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): ║ {type: END, callId: call_624f786917fd110851c27292bd92a0e2}
+I/AudioTrack(15184): isLongTimeZeroData zoer date time 1 Seconds
+I/flutter (15184):
+I/flutter (15184): ╔╣ Response ║ POST ║ Status: 200 OK
+I/flutter (15184): ║  https://prison.villaagroindah.com/api/inbound/api/v1/call
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): ╔ Body
+I/flutter (15184): ║
+I/flutter (15184): ║    {
+I/flutter (15184): ║         status: {code: 0, message: Success Submit Call},
+I/flutter (15184): ║         data: {isSuccess: true}
+I/flutter (15184): ║    }
+I/flutter (15184): ║
+I/flutter (15184): ╚══════════════════════════════════════════════════════════════════════════════════════════╝
+I/flutter (15184): 📞 VoiceCallStatusBloc: API call END sent for callId: call_624f786917fd110851c27292bd92a0e2
+I/spdlog  (15184): [2026-02-24 17:34:13.373][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_unregisterEventHandler_5fc0465 params "{}"
+I/spdlog  (15184): [2026-02-24 17:34:13.373][15971][I][iris_rtc_api_engine.cc:490] api name RtcEngine_unregisterEventHandler_5fc0465 extened params "{"event":12970367442770592608}"
+I/spdlog  (15184): [2026-02-24 17:34:13.373][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_unregisterEventHandler_5fc0465 result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:34:13.375][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_unregisterEventHandler_5fc0465 params "{}"
+I/spdlog  (15184): [2026-02-24 17:34:13.375][15971][I][iris_rtc_api_engine.cc:490] api name RtcEngine_unregisterEventHandler_5fc0465 extened params "{"event":12970367442770592608}"
+I/spdlog  (15184): [2026-02-24 17:34:13.375][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_unregisterEventHandler_5fc0465 result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:34:13.376][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_leaveChannel params "{"options":null}"
+D/connect.inbound(15184): PlayerBase::stop() from IPlayer
+D/AudioTrack(15184): stop(334): 0xb4000078da311600, prior state:STATE_ACTIVE
+D/AudioTrackShared(15184): this(0xb4000078f2fbdb40), mCblk(0x7b6eee8000), front(905216), mIsOut 1, interrupt() FUTEX_WAKE
+D/AudioTrack(15184): stop(334): 0xb4000078da311600 stop done
+D/AudioTrack(15184): flush(334): 0xb4000078da311600, prior state:STATE_STOPPED
+D/AudioRecord(15184): stop(336): 0xb4000078e247bb00, mActive:1
+D/AudioTrackShared(15184): this(0xb400007ab2652580), mCblk(0x7b5ec73900), front(902400), mIsOut 0, interrupt() FUTEX_WAKE
+I/spdlog  (15184): [2026-02-24 17:34:13.394][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_leaveChannel result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:34:13.420][15971][I][iris_rtc_api_engine.cc:438] api name RtcEngine_release params "{"sync":false}"
+I/spdlog  (15184): [2026-02-24 17:34:13.420][15971][I][iris_rtc_api_engine.cc:504] api name RtcEngine_release result 0 outdata {"result":0}
+I/spdlog  (15184): [2026-02-24 17:34:13.428][15971][I][iris_rtc_rendering_impl.cc:49] register video frame renderer observer 0
+D/AudioRecord(15184): stop(336) done
+D/AudioRecord(15184): stop(336): 0xb4000078e247bb00, mActive:0
+D/AudioRecord(15184): ~AudioRecord(336): mStatus 0
+D/AudioRecord(15184): stop(336): 0xb4000078e247bb00, mActive:0
+D/AudioTrackShared(15184): this(0xb400007ab2652580), mCblk(0x7b5ec73900), front(902400), mIsOut 0, interrupt() FUTEX_WAKE
+D/AudioTrack(15184): flush(334): 0xb4000078da311600, prior state:STATE_FLUSHED
+D/AudioTrack(15184): stop(334): 0xb4000078da311600, prior state:STATE_FLUSHED
+D/AudioTrack(15184): ~AudioTrack(334): 0xb4000078da311600
+D/AudioTrack(15184): stop(334): 0xb4000078da311600, prior state:STATE_FLUSHED
+D/AudioTrackShared(15184): this(0xb4000078f2fbdb40), mCblk(0x7b6eee8000), front(905906), mIsOut 1, interrupt() FUTEX_WAKE
+I/flutter (15184): 🔌 Agora: Left channel and released engine (full cleanup for next call)
+I/flutter (15184): AgoraHelper: Call ended
+D/JSON    (15184): []
+I/flutter (15184): [VOIP] Event: Event.actionCallEnded - ID: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): [VOIP] Call ended event: {id: call_624f786917fd110851c27292bd92a0e2, nameCaller: Lapas Connect, avatar: , number: Lapas Connect, type: 0, duration: 30000, textAccept: Accept, textDecline: Decline, extra: {call: START, callId: call_624f786917fd110851c27292bd92a0e2, agoraId: 0, agoraToken: 007eJxSYHi71vZPpsS1eRN+WIcLbIrVetm3xbH5x0Wxbx6z0683TBRVYEg2M042M7C0MDc3NTRJNjawNEsyTkuytEwxNjazMLVMiaubm8nBzsCgqsPCwAiFYD5DcmJOTryZkUmauYWZpaF5WoqhoYGFqWGykbmRpVFSiqVRokGqESeDkYWhgYGBiYUxIAAA//9OgSfj, callType: VOICE, requiresUnlock: false}, missedCallNotification: {id: 0, showNotification: true, count: 1, subtitle: , callbackText: , isShowCallback: true}, callingNotification: {id: null, showNotification: true, subtitle: , callbackText: , isShowCallback: true}, android: {isCustomNotification: true, isCustomSmallExNotification: true, ringtonePath: system_ringtone_default, backgroundColor: #0A1929, backgroundUrl: , actionColor: #5FD4A3, textColor: #FFFFFF, incomingCallNotificationChannelName: Incoming Calls, missedCallNotifica
+I/flutter (15184): [VOIP] Ignoring actionCallEnded - active call detected (likely notification tap to return)
+I/flutter (15184): [VOIP] Call will remain active, user returning to call screen
+I/flutter (15184): [VOIP] Event: Event.actionCallEnded - ID: call_624f786917fd110851c27292bd92a0e2
+I/flutter (15184): [VOIP] Call ended event: {id: call_624f786917fd110851c27292bd92a0e2, nameCaller: Lapas Connect, avatar: , number: Lapas Connect, type: 0, duration: 30000, textAccept: Accept, textDecline: Decline, extra: {call: START, callId: call_624f786917fd110851c27292bd92a0e2, agoraId: 0, agoraToken: 007eJxSYHi71vZPpsS1eRN+WIcLbIrVetm3xbH5x0Wxbx6z0683TBRVYEg2M042M7C0MDc3NTRJNjawNEsyTkuytEwxNjazMLVMiaubm8nBzsCgqsPCwAiFYD5DcmJOTryZkUmauYWZpaF5WoqhoYGFqWGykbmRpVFSiqVRokGqESeDkYWhgYGBiYUxIAAA//9OgSfj, callType: VOICE, requiresUnlock: false}, missedCallNotification: {id: 0, showNotification: true, count: 1, subtitle: , callbackText: , isShowCallback: true}, callingNotification: {id: null, showNotification: true, subtitle: , callbackText: , isShowCallback: true}, android: {isCustomNotification: true, isCustomSmallExNotification: true, ringtonePath: system_ringtone_default, backgroundColor: #0A1929, backgroundUrl: , actionColor: #5FD4A3, textColor: #FFFFFF, incomingCallNotificationChannelName: Incoming Calls, missedCallNotifica
+I/flutter (15184): [VOIP] Ignoring actionCallEnded - active call detected (likely notification tap to return)
+I/flutter (15184): [VOIP] Call will remain active, user returning to call screen
+D/SessionLifecycleClient(15184): Sending lifecycle 2 to service
+D/SessionLifecycleService(15184): Activity backgrounding at 30283015
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.inactive
+I/GED     (15184): ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 42, oppidx_max 42, oppidx_min 0
+D/BLASTBufferQueue(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#16](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#16(BLAST Consumer)16](id:3b5000000010,api:0,p:-1,c:15184) disconnect
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.hidden
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.paused
+E/FileUtils(15184): err write to mi_exception_log
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus false
+D/BLASTBufferQueue(15184): [VRI[MainActivity]#15](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [VRI[MainActivity]#15(BLAST Consumer)15](id:3b500000000f,api:0,p:-1,c:15184) disconnect
+E/FileUtils(15184): err write to mi_exception_log
+I/FA      (15184): Application backgrounded at: timestamp_millis: 1771929265794
+I/TRuntime.CctTransportBackend(15184): Making request to: https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog
+D/AppScoutStateMachine(15184): 15184-ScoutStateMachinecreated
+D/SessionLifecycleClient(15184): Sending lifecycle 1 to service
+D/SessionLifecycleService(15184): Activity foregrounding at 30372714.
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.hidden
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.inactive
+D/BufferQueueConsumer(15184): [](id:3b5000000011,api:0,p:-1,c:15184) connect: controlledByApp=false
+D/BufferQueueConsumer(15184): [](id:3b5000000012,api:0,p:-1,c:15184) connect: controlledByApp=false
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 38
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 0
+E/gralloc4(15184): Invalid base format! req_base_format = 0x0, req_format = 0x38, type = 0x0
+E/gralloc4(15184): ERROR: Unrecognized and/or unsupported format 0x38 and usage 0xb00
+E/Gralloc4(15184): isSupported(1, 1, 56, 1, ...) failed with 5
+E/GraphicBufferAllocator(15184): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 5
+E/AHardwareBuffer(15184): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -5), handle=0x0
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 38
+E/gralloc4(15184): ERROR: Format allocation info not found for format: 0
+E/gralloc4(15184): Invalid base format! req_base_format = 0x0, req_format = 0x38, type = 0x0
+E/gralloc4(15184): ERROR: Unrecognized and/or unsupported format 0x38 and usage 0xb00
+E/Gralloc4(15184): isSupported(1, 1, 56, 1, ...) failed with 5
+E/GraphicBufferAllocator(15184): Failed to allocate (4 x 4) layerCount 1 format 56 usage b00: 5
+E/AHardwareBuffer(15184): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -5), handle=0x0
+D/SurfaceView(15184): UPDATE Surface(name=SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity])/@0xb5778f, mIsProjectionMode = false
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+D/SurfaceControl(15184): nativeSetScreenProjection ===> setScreenProjection
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [VRI[MainActivity]#17](f:0,a:1) acquireNextBufferLocked size=1080x2400 mFrameNumber=1 applyTransaction=true mTimestamp=30372802255040(auto) mPendingTransactions.size=0 graphicBufferId=65214783422619 transform=0
+E/FileUtils(15184): err write to mi_exception_log
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#18](f:0,a:1) acquireNextBufferLocked size=1080x2270 mFrameNumber=1 applyTransaction=true mTimestamp=30372825550732(auto) mPendingTransactions.size=0 graphicBufferId=65214783422614 transform=0
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.resumed
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus true
+I/HandWritingStubImpl(15184): refreshLastKeyboardType: 1
+I/HandWritingStubImpl(15184): getCurrentKeyboardType: 1
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.inactive
+D/SessionLifecycleClient(15184): Sending lifecycle 2 to service
+D/SessionLifecycleService(15184): Activity backgrounding at 30373843
+D/DecorView[](15184): onWindowFocusChanged hasWindowFocus false
+I/GED     (15184): ged_boost_gpu_freq, level 100, eOrigin 2, final_idx 42, oppidx_max 42, oppidx_min 0
+E/gralloc4(15184): Empty SMPTE 2094-40 data
+D/BLASTBufferQueue(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#18](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [SurfaceView[arjaya.telindo.lapas.connect.inbound/arjaya.telindo.lapas.connect.inbound.MainActivity]#18(BLAST Consumer)18](id:3b5000000012,api:0,p:-1,c:15184) disconnect
+D/BLASTBufferQueue(15184): [VRI[MainActivity]#17](f:0,a:1) destructor()
+D/BufferQueueConsumer(15184): [VRI[MainActivity]#17(BLAST Consumer)17](id:3b5000000011,api:0,p:-1,c:15184) disconnect
+E/FileUtils(15184): err write to mi_exception_log
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.hidden
+I/flutter (15184): [App] Lifecycle state: AppLifecycleState.paused
+E/FileUtils(15184): err write to mi_exception_log
+E/FileUtils(15184): err write to mi_exception_log
+I/TRuntime.CctTransportBackend(15184): Status Code: 200
+I/FA      (15184): Application backgrounded at: timestamp_millis: 1771929356657
+I/TRuntime.CctTransportBackend(15184): Making request to: https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog
+I/TRuntime.CctTransportBackend(15184): Status Code: 200

@@ -1,0 +1,9 @@
+{
+  "last_finding": "missing token validation",
+  "severity": "HIGH",
+  "fix_applied": true,
+  "files_modified": [
+    "lib/features/call/data/signaling_service.dart"
+  ],
+  "round": 2
+}
