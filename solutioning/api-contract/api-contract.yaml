@@ -1,0 +1,510 @@
+openapi: "3.0.3"
+info:
+  title: RT-RW Digital - API Kontrak
+  description: |
+    API untuk manajemen RT-RW Digital. 
+    Menggunakan ID Hunian sebagai basis data (tanpa NIK/KTP).
+  version: 2.0.0
+  contact:
+    name: Tim Developer RT-RW Digital
+
+servers:
+  - url: https://api.rt-rw-digital.example.com/v1
+    description: Production server
+
+paths:
+  # ============================================================
+  # AUTH
+  # ============================================================
+  /auth/register:
+    post:
+      tags: [Autentikasi]
+      summary: Daftar akun baru (Langkah 1)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [phone, name, password, password_confirmation]
+              properties:
+                phone:
+                  type: string
+                  example: "08123456789"
+                name:
+                  type: string
+                  example: "Budi Santoso"
+                password:
+                  type: string
+                  format: password
+                  minLength: 8
+                password_confirmation:
+                  type: string
+                  format: password
+      responses:
+        "201":
+          description: Registrasi berhasil, OTP dikirim
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+
+  /auth/register/verify:
+    post:
+      tags: [Autentikasi]
+      summary: Verifikasi OTP registrasi (Langkah 2)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [phone, otp]
+              properties:
+                phone:
+                  type: string
+                otp:
+                  type: string
+                  example: "123456"
+      responses:
+        "200":
+          description: Akun aktif
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+
+  /auth/login:
+    post:
+      tags: [Autentikasi]
+      summary: Login
+      description: Login menggunakan nomor handphone dan password.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [phone, password]
+              properties:
+                phone:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Login berhasil
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+
+  /auth/password/forgot:
+    post:
+      tags: [Autentikasi]
+      summary: Lupa Password (Langkah 1)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [phone]
+              properties:
+                phone:
+                  type: string
+      responses:
+        "200":
+          description: OTP reset terkirim
+
+  /auth/password/reset:
+    post:
+      tags: [Autentikasi]
+      summary: Reset Password (Langkah 2)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [phone, otp, password, password_confirmation]
+              properties:
+                phone:
+                  type: string
+                otp:
+                  type: string
+                password:
+                  type: string
+                password_confirmation:
+                  type: string
+      responses:
+        "200":
+          description: Password berhasil direset
+
+  # ============================================================
+  # IURAN
+  # ============================================================
+  /iuran:
+    get:
+      tags: [Iuran]
+      summary: Daftar tagihan & riwayat iuran
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [belum_bayar, lunas]
+        - name: bulan
+          in: query
+          schema:
+            type: integer
+        - name: tahun
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: List iuran
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Iuran"
+
+  /iuran/{id}:
+    get:
+      tags: [Iuran]
+      summary: Detail iuran
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Iuran"
+
+  /iuran/{id}/bayar:
+    post:
+      tags: [Iuran]
+      summary: Konfirmasi pembayaran iuran
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          description: Pembayaran diproses
+
+  # ============================================================
+  # KAS
+  # ============================================================
+  /kas:
+    get:
+      tags: [Kas]
+      summary: Ringkasan saldo & cashflow
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/KasSummary"
+
+  /kas/history:
+    get:
+      tags: [Kas]
+      summary: Riwayat mutasi kas
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: tipe
+          in: query
+          schema:
+            type: string
+            enum: [masuk, keluar]
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/KasMutasi"
+
+  # ============================================================
+  # ACARA
+  # ============================================================
+  /acara:
+    get:
+      tags: [Acara]
+      summary: Kalender acara bulanan
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: bulan
+          in: query
+          schema:
+            type: integer
+        - name: tahun
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Acara"
+
+  /acara/{id}:
+    get:
+      tags: [Acara]
+      summary: Detail acara
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AcaraDetail"
+
+  /acara/{id}/rsvp:
+    post:
+      tags: [Acara]
+      summary: Konfirmasi kehadiran (RSVP)
+      security:
+        - BearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status:
+                  type: string
+                  enum: [hadir, tidak, mungkin]
+      responses:
+        "200":
+          description: RSVP berhasil
+
+  # ============================================================
+  # PROFIL & HUNIAN
+  # ============================================================
+  /profil/me:
+    get:
+      tags: [Profil]
+      summary: Profil saya (Lengkap)
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProfilLengkap"
+
+    put:
+      tags: [Profil]
+      summary: Update profil diri
+      security:
+        - BearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                avatar:
+                  type: string
+      responses:
+        "200":
+          description: Profil diperbarui
+
+  /profil/me/hunian:
+    put:
+      tags: [Profil]
+      summary: Update data hunian
+      security:
+        - BearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Hunian"
+      responses:
+        "200":
+          description: Data hunian diperbarui
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    AuthResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        token:
+          type: string
+        user:
+          $ref: "#/components/schemas/User"
+
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        phone:
+          type: string
+        avatar:
+          type: string
+
+    Iuran:
+      type: object
+      properties:
+        id:
+          type: integer
+        jenis:
+          type: string
+        periode:
+          type: string
+        nominal:
+          type: number
+        status:
+          type: string
+        tanggal_bayar:
+          type: string
+          format: date-time
+
+    KasSummary:
+      type: object
+      properties:
+        saldo_total:
+          type: number
+        total_masuk_bulan_ini:
+          type: number
+        total_keluar_bulan_ini:
+          type: number
+
+    KasMutasi:
+      type: object
+      properties:
+        id:
+          type: integer
+        tanggal:
+          type: string
+          format: date
+        tipe:
+          type: string
+        nominal:
+          type: number
+        keterangan:
+          type: string
+
+    Acara:
+      type: object
+      properties:
+        id:
+          type: integer
+        nama:
+          type: string
+        tanggal:
+          type: string
+          format: date
+        waktu:
+          type: string
+        lokasi:
+          type: string
+
+    AcaraDetail:
+      allOf:
+        - $ref: "#/components/schemas/Acara"
+        - type: object
+          properties:
+            deskripsi:
+              type: string
+            status_rsvp_saya:
+              type: string
+            total_peserta:
+              type: integer
+
+    ProfilLengkap:
+      type: object
+      properties:
+        kepala_keluarga:
+          $ref: "#/components/schemas/User"
+        hunian:
+          $ref: "#/components/schemas/Hunian"
+        anggota_keluarga:
+          type: array
+          items:
+            $ref: "#/components/schemas/AnggotaKeluarga"
+
+    Hunian:
+      type: object
+      properties:
+        id_hunian:
+          type: string
+        alamat:
+          type: string
+        rt:
+          type: string
+        rw:
+          type: string
+        tipe_hunian:
+          type: string
+        status_kepemilikan:
+          type: string
+
+    AnggotaKeluarga:
+      type: object
+      properties:
+        id:
+          type: integer
+        nama:
+          type: string
+        relasi:
+          type: string
+        tanggal_lahir:
+          type: string
+          format: date
+
+  responses:
+    UnprocessableEntity:
+      description: Validasi Gagal
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              errors:
+                type: object
