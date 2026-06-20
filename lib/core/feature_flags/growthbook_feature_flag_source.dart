@@ -35,6 +35,9 @@ class GrowthBookFeatureFlagSource implements FeatureFlagRemoteSource {
     final flags = <String, bool>{};
     for (final key in _flagKeys) {
       final feature = _sdk.feature(key);
+      // Skip features not defined on GrowthBook server.
+      // This lets FeatureFlagService fall back to manifest defaults.
+      if (feature.source == GBFeatureSource.unknownFeature) continue;
       flags[key] = feature.on;
     }
     return flags;
