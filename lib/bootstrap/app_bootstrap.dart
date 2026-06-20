@@ -22,17 +22,37 @@ class BootstrapResult {
   });
 }
 
-/// Orchestrates application bootstrap sequence.
+/// Orchestrates application bootstrap with **Offline-First** strategy.
 ///
-/// Order:
-/// 1. Create registry
-/// 2. Register modules
-/// 3. Set up feature flags
-/// 4. Check version compatibility
-/// 5. Set up DI
-/// 6. Initialize modules
+/// # Bootstrap Flow
+/// ```
+/// App Start
+///   ↓
+/// Register All Modules
+///   ↓
+/// Load Cached Feature Flags (non-blocking)
+///   ↓
+/// DI Setup (all enabled modules)
+///   ↓
+/// Init Eager Enabled Modules
+///   ↓
+/// App Ready ✅
+///   ↓ (background)
+/// Refresh GrowthBook Remote Flags
+///   ↓
+/// Persist New Flags → Apply Next Session
+/// ```
+///
+/// # Key Properties
+/// - **GrowthBook NEVER blocks startup.**
+/// - Cache is loaded before first frame.
+/// - Remote refresh happens in background after app is ready.
+/// - Manifest defaults used when both cache and remote are unavailable.
+///
+/// # Metrics
+/// Call [BootstrapMetrics.printReport] after warmup completes.
 class AppBootstrap {
-  /// Run the full bootstrap sequence.
+  /// Run the full bootstrap sequence (non-blocking for remote flags).
   static Future<BootstrapResult> run({
     required List<FeatureModule> modules,
     required ModuleVersion shellVersion,
@@ -49,17 +69,18 @@ class AppBootstrap {
           localCache: localFlagCache,
         );
 
+    registry.metrics.totalWatch.start();
+
     try {
-      // 1. Register modules
+      // ═══════════════════════════════════════════════
+      //  PHASE 1: Register All Modules (lightweight)
+      // ═══════════════════════════════════════════════
       debugPrint('Bootstrap: Registering ${modules.length} module(s)...');
       registry.registerAll(modules);
 
-      // 2. Set up feature flags
-      registry.setFeatureFlagService(featureFlagService);
-      await featureFlagService.load();
-      debugPrint('Bootstrap: Feature flags loaded.');
-
-      // 3. Check version compatibility
+      // ═══════════════════════════════════════════════
+      //  PHASE 2: Version Compatibility Check
+      // ═══════════════════════════════════════════════
       final compatibility = VersionCompatibility(shellVersion: shellVersion);
       registry.setCompatibility(compatibility);
       final compatResults = registry.checkCompatibility();
@@ -71,6 +92,7 @@ class AppBootstrap {
         if (blocking.isNotEmpty) {
           final messages = blocking.map((r) => r.reason!).join('; ');
           debugPrint('Bootstrap: Blocking compatibility issues: $messages');
+          registry.metrics.totalWatch.stop();
           return BootstrapResult(
             registry: registry,
             featureFlagService: featureFlagService,
@@ -82,19 +104,43 @@ class AppBootstrap {
         }
       }
 
-      // 4. Set up DI for enabled modules
+      // ═══════════════════════════════════════════════
+      //  PHASE 3: Load Cached Feature Flags (non-blocking)
+      // ═══════════════════════════════════════════════
+      registry.setFeatureFlagService(featureFlagService);
+      await featureFlagService.loadCached();
+      debugPrint('Bootstrap: Feature flags loaded from cache.');
+
+      // ═══════════════════════════════════════════════
+      //  PHASE 4: DI Setup (all enabled modules)
+      // ═══════════════════════════════════════════════
       debugPrint('Bootstrap: Setting up DI...');
+      registry.metrics.diWatch.start();
       setupCoreInjection();
       for (final module in registry.enabledModules) {
         debugPrint('Bootstrap: Setting up DI for "${module.name}"...');
         module.setupDependencies();
       }
+      registry.metrics.diWatch.stop();
 
-      // 5. Initialize enabled modules
-      debugPrint('Bootstrap: Initializing modules...');
-      await registry.initializeAll();
+      // ═══════════════════════════════════════════════
+      //  PHASE 5: Init Eager Modules (blocking)
+      // ═══════════════════════════════════════════════
+      final eagerCount = registry.eagerModules.length;
+      debugPrint('Bootstrap: Initializing $eagerCount eager module(s)...');
+      registry.metrics.initWatch.start();
+      await registry.initializeByStrategy(ModuleInitializationStrategy.eager);
+      registry.metrics.initWatch.stop();
+
+      registry.metrics.totalWatch.stop();
 
       debugPrint('Bootstrap: Complete.');
+      debugPrint(
+        '  Registered: ${registry.count} module(s), '
+        'Initialized: ${registry.metrics.initializedCount} module(s), '
+        'Startup: ${registry.metrics.totalWatch.elapsed.inMilliseconds} ms',
+      );
+
       return BootstrapResult(
         registry: registry,
         featureFlagService: featureFlagService,
@@ -103,6 +149,7 @@ class AppBootstrap {
         success: true,
       );
     } catch (e, stack) {
+      registry.metrics.totalWatch.stop();
       debugPrint('Bootstrap: Failed: $e');
       debugPrint('$stack');
       return BootstrapResult(
@@ -113,6 +160,43 @@ class AppBootstrap {
         success: false,
         error: e.toString(),
       );
+    }
+  }
+}
+
+/// Extension on [ModuleRegistry] for post-bootstrap operations.
+///
+/// Usage:
+/// ```dart
+/// // After first frame:
+/// WidgetsBinding.instance.addPostFrameCallback((_) async {
+///   await registry.scheduleWarmup();
+///   await registry.scheduleBackgroundRefresh();
+///   registry.metrics.printReport();
+/// });
+/// ```
+extension PostBootstrapExtension on ModuleRegistry {
+  /// Initialize warmup modules in background (non-blocking).
+  Future<void> scheduleWarmup() async {
+    final warmup = warmupModules;
+    if (warmup.isEmpty) return;
+    debugPrint('ModuleRegistry: Warmup ${warmup.length} module(s)...');
+    for (final module in warmup) {
+      await initializeModule(module.name);
+    }
+    debugPrint('ModuleRegistry: Warmup complete.');
+  }
+
+  /// Refresh feature flags from remote in background.
+  ///
+  /// Safe to call at any time. Persists flags for next cold start.
+  Future<void> scheduleBackgroundRefresh() async {
+    final ffService = featureFlagService;
+    if (ffService == null) return;
+    debugPrint('ModuleRegistry: Background flag refresh...');
+    final updated = await ffService.refreshRemote();
+    if (updated) {
+      debugPrint('ModuleRegistry: Flags refreshed, applying to module states.');
     }
   }
 }

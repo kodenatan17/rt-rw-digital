@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
+import 'package:core_module/core_module.dart';
 
 /// Event emitted when a feature flag changes.
 class FlagChange {
@@ -22,13 +23,18 @@ abstract class FeatureFlagLocalCache {
   Future<void> clear();
 }
 
-/// Controls module and feature visibility remotely.
+/// Controls module and feature visibility.
 ///
-/// Resolution order:
-/// 1. Remote flags (from API) — highest priority
-/// 2. Local overrides (debug settings) — debug only
-/// 3. Default values (from module manifests) — fallback
-class FeatureFlagService {
+/// # Offline-First Resolution Order
+/// 1. Remote flags (GrowthBook API) — highest priority
+/// 2. Local cached flags — used when remote unavailable
+/// 3. Module manifest defaults — fallback
+///
+/// # Non-Blocking Guarantee
+/// - [loadCached] reads cache instantly, never throws.
+/// - [refreshRemote] is safe to call at any time (background).
+/// - GrowthBook unavailability NEVER blocks app startup.
+class FeatureFlagService implements FeatureFlagRepository {
   final FeatureFlagRemoteSource? remoteSource;
   final FeatureFlagLocalCache? localCache;
 
@@ -43,75 +49,78 @@ class FeatureFlagService {
     this.localCache,
   });
 
-  /// Stream of flag changes.
+  /// Stream of flag changes (for reactive UI).
   Stream<FlagChange> get onFlagChanged => _changeController.stream;
 
-  /// Whether flags have been loaded.
+  /// Whether cached flags have been loaded at least once.
   bool get isLoaded => _loaded;
 
-  /// Load flags from cache then remote.
-  Future<void> load() async {
-    // 1. Load from cache first (instant)
-    if (localCache != null) {
-      final cached = await localCache!.getCached();
-      if (cached != null) {
-        _remoteFlags = cached;
-      }
-    }
+  // ── FeatureFlagRepository implementation ──────────
 
-    // 2. Try remote (may fail — use cached/default)
-    if (remoteSource != null) {
-      try {
-        final remote = await remoteSource!.fetchFlags();
-        _remoteFlags = remote;
-        // Update cache
-        if (localCache != null) {
-          await localCache!.cache(remote);
-        }
-      } catch (e) {
-        debugPrint('FeatureFlagService: Remote fetch failed, using cached: $e');
-      }
-    }
+  @override
+  Map<String, bool> resolveFlags() =>
+      {..._remoteFlags, ..._localOverrides};
 
-    _loaded = true;
-    debugPrint('FeatureFlagService: Loaded ${_remoteFlags.length} flag(s)');
-  }
-
-  /// Refresh flags from remote.
-  Future<void> refresh() async {
-    if (remoteSource == null) return;
-
-    try {
-      final remote = await remoteSource!.fetchFlags();
-      _remoteFlags = remote;
-      if (localCache != null) {
-        await localCache!.cache(remote);
-      }
-      debugPrint('FeatureFlagService: Refreshed ${remote.length} flag(s)');
-    } catch (e) {
-      debugPrint('FeatureFlagService: Refresh failed: $e');
-    }
-  }
-
-  // ── Flag Resolution ───────────────────────────────
-
-  /// Check if a specific feature flag is enabled.
+  @override
   bool isEnabled(String flagName) {
-    // 1. Remote flags (highest priority)
+    // 1. Remote/cached flags (highest priority)
     if (_remoteFlags.containsKey(flagName)) {
       return _remoteFlags[flagName]!;
     }
-
     // 2. Local overrides (debug only)
     if (_localOverrides.containsKey(flagName)) {
       return _localOverrides[flagName]!;
     }
-
-    // 3. No default — assume enabled
+    // 3. No override — caller falls back to manifest default.
     return true;
   }
 
-  /// Check if a module is enabled.
+  @override
+  Future<void> loadCached() async {
+    if (localCache != null) {
+      try {
+        final cached = await localCache!.getCached();
+        if (cached != null) {
+          _remoteFlags = cached;
+        }
+      } catch (_) {
+        // Cache read failure is non-fatal.
+      }
+    }
+    _loaded = true;
+    debugPrint('FeatureFlagService: Loaded ${_remoteFlags.length} cached flag(s)');
+  }
+
+  @override
+  Future<bool> refreshRemote() async {
+    if (remoteSource == null) return false;
+
+    try {
+      final remote = await remoteSource!.fetchFlags();
+      _remoteFlags = remote;
+      // Persist to cache for next cold start
+      if (localCache != null) {
+        await localCache!.cache(remote);
+      }
+      debugPrint('FeatureFlagService: Refreshed ${remote.length} flag(s)');
+      return true;
+    } catch (e) {
+      debugPrint('FeatureFlagService: Remote refresh failed — using cached: $e');
+      return false;
+    }
+  }
+
+  @override
+  Future<void> saveFlags(Map<String, bool> flags) async {
+    _remoteFlags = flags;
+    if (localCache != null) {
+      await localCache!.cache(flags);
+    }
+  }
+
+  // ── Module Helpers ────────────────────────────────
+
+  /// Check if a module is enabled (remote → cache → true default).
   bool isModuleEnabled(String moduleName) {
     return isEnabled('$moduleName.enabled');
   }
@@ -122,34 +131,20 @@ class FeatureFlagService {
     return isEnabled('$moduleName.visible');
   }
 
-  /// Get all flags for a module.
-  Map<String, bool> getModuleFlags(String moduleName) {
-    final result = <String, bool>{};
-    for (final entry in _remoteFlags.entries) {
-      if (entry.key.startsWith('$moduleName.')) {
-        result[entry.key] = entry.value;
-      }
-    }
-    return result;
-  }
-
   /// All known flags (remote + local overrides).
   Map<String, bool> get allFlags => {..._remoteFlags, ..._localOverrides};
 
   // ── Local Overrides (Debug Only) ──────────────────
 
-  /// Set a local override (debug builds only).
   void setOverride(String flagName, bool value) {
     _localOverrides[flagName] = value;
     _changeController.add(FlagChange(key: flagName, value: value));
   }
 
-  /// Remove a local override.
   void removeOverride(String flagName) {
     _localOverrides.remove(flagName);
   }
 
-  /// Clear all overrides.
   void clearOverrides() {
     _localOverrides.clear();
   }

@@ -6,15 +6,17 @@ import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:core_module/core_module.dart';
 import 'package:resident_module/resident_module.dart';
-import 'package:resident_module/presentation/bloc/auth_bloc.dart';
-import 'package:resident_module/presentation/bloc/auth_event.dart';
-import 'package:resident_module/presentation/bloc/auth_state.dart';
-import 'package:resident_module/presentation/pages/login_page.dart';
-import 'package:resident_module/presentation/pages/otp_verification_page.dart';
+import 'package:authentication_module/authentication_module.dart';
+import 'package:authentication_module/presentation/bloc/auth_bloc.dart';
+import 'package:authentication_module/presentation/bloc/auth_event.dart';
+import 'package:authentication_module/presentation/bloc/auth_state.dart';
+import 'package:authentication_module/presentation/pages/login_page.dart';
+import 'package:authentication_module/presentation/pages/otp_verification_page.dart';
 
 import 'auth_token_store.dart';
 import 'bootstrap/app_bootstrap.dart';
 import 'core/module_registry/module_registry.dart';
+import 'core/feature_flags/feature_flag_service.dart';
 import 'core/feature_flags/growthbook_service.dart';
 
 /// Bridges [AuthBloc] stream to [ChangeNotifier] for GoRouter refresh.
@@ -50,21 +52,17 @@ Future<void> main() async {
 
   // ── 1. Define Modules ───────────────────────────────
   final modules = <FeatureModule>[
+    AuthenticationModule(),
     ResidentModule(),
     // Future: FinanceModule(), ComplaintModule(), MeetingModule(), SecurityModule()
   ];
 
-  // ── 2. Init GrowthBook Feature Flags ────────────────
-  final gbService = GrowthBookService();
-  await gbService.initialize(
-    flagKeys: _collectFlagKeys(modules).toList(),
-  );
-
-  // ── 3. Bootstrap Shell ──────────────────────────────
+  // ── 2. Bootstrap Shell (offline-first) ───────────────
+  // GrowthBook init happens AFTER bootstrap — NEVER blocks startup.
   final result = await AppBootstrap.run(
     modules: modules,
     shellVersion: shellVersion,
-    remoteFlagSource: gbService.createSource(),
+    remoteFlagSource: null, // GrowthBook added post-bootstrap
     skipCompatibilityCheck: true,
   );
 
@@ -73,15 +71,16 @@ Future<void> main() async {
     return;
   }
 
-  // ── 4. Init Resident DI ────────────────────────────
-  // ResidentModule.setupDependencies() already called by AppBootstrap.
-  // AuthBloc is now available via GetIt.
-
-  // ── 5. Auth Token Store (shell-level) ───────────────
+  // ── 3. Auth Token Store (shell-level) ───────────────
   final tokenStore = AuthTokenStore();
   await tokenStore.init();
 
-  // ── 6. Run ──────────────────────────────────────────
+  // ── 4. Init GrowthBook + Background Refresh ────────
+  final gbService = GrowthBookService();
+  // Non-blocking: GrowthBook init starts but never blocks UI.
+  unawaited(_initGrowthBookAndRefresh(gbService, modules, result.registry));
+
+  // ── 5. Run ──────────────────────────────────────────
   runApp(
     RtRwApp(
       registry: result.registry,
@@ -96,9 +95,15 @@ Future<void> main() async {
 // ══════════════════════════════════════════════════════════════════════
 
 /// Collect all known feature flag keys from module manifests.
+///
+/// Generates standard flag keys: `<module>.enabled`, `<module>.visible`.
 Set<String> _collectFlagKeys(List<FeatureModule> modules) {
   return {
-    for (final module in modules) ...module.manifest.featureFlags.keys,
+    for (final module in modules)
+      ...[
+        '${module.name}.enabled',
+        '${module.name}.visible',
+      ],
   };
 }
 
@@ -121,6 +126,40 @@ class RtRwApp extends StatefulWidget {
 
   @override
   State<RtRwApp> createState() => _RtRwAppState();
+}
+
+/// Initialize GrowthBook SDK and refresh flags in background.
+///
+/// This runs after the app is already visible to the user.
+/// GrowthBook unavailability NEVER blocks startup.
+Future<void> _initGrowthBookAndRefresh(
+  GrowthBookService gbService,
+  List<FeatureModule> modules,
+  ModuleRegistry registry,
+) async {
+  // 1. Init GrowthBook SDK (may fail — non-fatal)
+  await gbService.initialize(
+    flagKeys: _collectFlagKeys(modules).toList(),
+  );
+
+  // 2. Set remote source on existing flag service
+  final remoteSource = gbService.createSource();
+  if (remoteSource != null) {
+    // Create a new FeatureFlagService with remote source
+    final ffService = FeatureFlagService(
+      remoteSource: remoteSource,
+      // Reuse existing local cache if any — not strictly needed for now
+    );
+    registry.setFeatureFlagService(ffService);
+    await ffService.loadCached();
+    await ffService.refreshRemote();
+  }
+
+  // 3. Schedule warmup + background work after first frame
+  WidgetsBinding.instance.addPostFrameCallback((_) async {
+    await registry.scheduleWarmup();
+    registry.metrics.printReport();
+  });
 }
 
 class _RtRwAppState extends State<RtRwApp> {
