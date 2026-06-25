@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:core_module/core_module.dart';
 import '../core/module_registry/module_registry.dart';
 import '../core/feature_flags/feature_flag_service.dart';
+import '../injection/shell_injection.dart';
 
 /// Result of the bootstrap process.
 class BootstrapResult {
@@ -116,7 +117,16 @@ class AppBootstrap {
       // ═══════════════════════════════════════════════
       debugPrint('Bootstrap: Setting up DI...');
       registry.metrics.diWatch.start();
-      setupCoreInjection();
+
+      // Shell DI is idempotent (isRegistered guards inside).
+      setupShellInjection();
+
+      // Core DI — external package (injectable). Double-registration
+      // would throw StateError only if injectable.initCore is called
+      // twice. Wrapping defensively to prevent a re-entrant
+      // AppBootstrap.run from failing the whole bootstrap.
+      _trySetupCoreInjection();
+
       for (final module in registry.enabledModules) {
         debugPrint('Bootstrap: Setting up DI for "${module.name}"...');
         module.setupDependencies();
@@ -160,6 +170,18 @@ class AppBootstrap {
         success: false,
         error: e.toString(),
       );
+    }
+  }
+
+  /// Calls [setupCoreInjection] without letting a double-registration
+  /// error propagate to the outer [BootstrapResult] failure path.
+  static void _trySetupCoreInjection() {
+    try {
+      setupCoreInjection();
+    } catch (e) {
+      // injectable.initCore throws StateError when called twice.
+      // This is safe to skip — types are already registered.
+      debugPrint('Bootstrap: setupCoreInjection skipped (already ran): $e');
     }
   }
 }

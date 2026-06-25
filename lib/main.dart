@@ -15,9 +15,14 @@ import 'package:authentication_module/presentation/pages/otp_verification_page.d
 
 import 'auth_token_store.dart';
 import 'bootstrap/app_bootstrap.dart';
+import 'core/analytics/analytics.dart';
+import 'core/analytics/firebase_service.dart';
 import 'core/module_registry/module_registry.dart';
 import 'core/feature_flags/feature_flag_service.dart';
 import 'core/feature_flags/growthbook_service.dart';
+import 'core/security/security_helper.dart';
+import 'injection/app_injection.dart';
+import 'security_blocked_app.dart';
 
 /// Bridges [AuthBloc] stream to [ChangeNotifier] for GoRouter refresh.
 class AuthRedirectNotifier extends ChangeNotifier {
@@ -48,8 +53,64 @@ const shellVersion = ModuleVersion(1, 0, 0);
 // ══════════════════════════════════════════════════════════════════════
 
 Future<void> main() async {
+  // ── Phase 0: Platform binding ───────────────────────
   WidgetsFlutterBinding.ensureInitialized();
 
+  // ── Phase 0.1: Security check (BLOCKING) ────────────
+  // Must run before any module or token initialisation so a compromised
+  // device is rejected before it ever touches sensitive data.
+  final securityResult = await SecurityHelper.checkDevice();
+  final deviceBlocked =
+      SecurityHelper.enforceSecurity && securityResult.isCompromised;
+
+  // ── Phase 0.2: Firebase initialisation (BLOCKING) ───
+  // Initialize before security block so we can log jailbreak events
+  // Firebase must be ready before AppBootstrap so that:
+  //   • Crashlytics catches any error thrown during bootstrap.
+  //   • setupShellInjection() can resolve FirebaseService.isInitialized.
+  await FirebaseService.initialize();
+
+  // ── Phase 0.2.5: Log jailbreak detection if applicable ─
+  if (deviceBlocked) {
+    if (FirebaseService.isInitialized) {
+      FirebaseService.crashlytics.log('Device jailbroken/rooted - access blocked');
+      try {
+        await FirebaseService.crashlytics.recordError(
+          Exception('Jailbreak detected'),
+          StackTrace.current,
+          fatal: false,
+        );
+      } catch (_) {}
+    }
+    debugPrint('main: device security check FAILED — halting.');
+    runApp(const SecurityBlockedApp());
+    return;
+  }
+
+  // ── Phase 0.3: Error zone ────────────────────────────
+  // Wrap the remaining startup in a guarded zone so that any async
+  // error not caught by a framework hook is forwarded to Crashlytics.
+  runZonedGuarded(
+    _bootstrap,
+    (error, stack) {
+      debugPrint('main: uncaught zoned error: $error');
+      if (FirebaseService.isInitialized) {
+        FirebaseService.crashlytics.recordError(error, stack, fatal: true);
+      }
+    },
+  );
+}
+
+// ══════════════════════════════════════════════════════════════════════
+//  Bootstrap (inside guarded zone)
+// ══════════════════════════════════════════════════════════════════════
+
+/// Runs the full module-registry bootstrap inside [runZonedGuarded].
+///
+/// Separated from [main] so the zone captures errors from every await
+/// below, including [AppBootstrap.run], [AuthTokenStore.init], and the
+/// background GrowthBook init.
+Future<void> _bootstrap() async {
   // ── 1. Define Modules ───────────────────────────────
   final modules = <FeatureModule>[
     AuthenticationModule(),
@@ -59,6 +120,8 @@ Future<void> main() async {
 
   // ── 2. Bootstrap Shell (offline-first) ───────────────
   // GrowthBook init happens AFTER bootstrap — NEVER blocks startup.
+  // setupShellInjection() is called inside AppBootstrap Phase 4,
+  // registering Firebase services into GetIt before module DI runs.
   final result = await AppBootstrap.run(
     modules: modules,
     shellVersion: shellVersion,
@@ -70,6 +133,9 @@ Future<void> main() async {
     runApp(ForcedUpdateApp(message: result.error ?? 'Bootstrap failed'));
     return;
   }
+
+  // ── 2.5. Add Performance interceptor to Dio ──────
+  addPerformanceInterceptor();
 
   // ── 3. Auth Token Store (shell-level) ───────────────
   final tokenStore = AuthTokenStore();
@@ -166,11 +232,24 @@ class _RtRwAppState extends State<RtRwApp> {
   late final GoRouter _router;
   late final AuthBloc _authBloc;
   late final AuthRedirectNotifier _redirectNotifier;
+  late final AnalyticsService _analytics;
+  late final CrashlyticsService _crashlytics;
+  StreamSubscription<AuthState>? _authSubscription;
+  String? _lastScreenView;
 
   @override
   void initState() {
     super.initState();
     _authBloc = getIt<AuthBloc>();
+    _analytics = getIt<AnalyticsService>();
+    _crashlytics = getIt<CrashlyticsService>();
+
+    // Listen to auth state changes for analytics + crashlytics
+    _authSubscription = _authBloc.stream.listen(_onAuthStateChanged);
+
+    // Log initial screen
+    _analytics.logScreenView(screenName: 'App');
+
     _redirectNotifier = AuthRedirectNotifier(_authBloc);
     _router = GoRouter(
       initialLocation: '/',
@@ -181,18 +260,21 @@ class _RtRwAppState extends State<RtRwApp> {
         GoRoute(
           path: '/login',
           name: 'login',
-          builder: (context, state) => BlocProvider.value(
-            value: _authBloc,
-            child: const LoginPage(),
+          builder: (context, state) => _withScreenView(
+            'Login',
+            BlocProvider.value(value: _authBloc, child: const LoginPage()),
           ),
         ),
         GoRoute(
           path: '/register-verify',
           name: 'register.verify',
-          builder: (context, state) => BlocProvider.value(
-            value: _authBloc,
-            child: OtpVerificationPage(
-              phone: state.uri.queryParameters['phone'] ?? '',
+          builder: (context, state) => _withScreenView(
+            'OtpVerification',
+            BlocProvider.value(
+              value: _authBloc,
+              child: OtpVerificationPage(
+                phone: state.uri.queryParameters['phone'] ?? '',
+              ),
             ),
           ),
         ),
@@ -205,10 +287,13 @@ class _RtRwAppState extends State<RtRwApp> {
           routes: [
             GoRoute(
               path: '/',
-              builder: (context, state) => DashboardPage(
-                registry: widget.registry,
-                tokenStore: widget.tokenStore,
-                onLogout: () => _authBloc.add(const LogoutRequested()),
+              builder: (context, state) => _withScreenView(
+                'Dashboard',
+                DashboardPage(
+                  registry: widget.registry,
+                  tokenStore: widget.tokenStore,
+                  onLogout: () => _authBloc.add(const LogoutRequested()),
+                ),
               ),
             ),
             // Module-owned routes (auto-registered)
@@ -237,8 +322,37 @@ class _RtRwAppState extends State<RtRwApp> {
     return null;
   }
 
+  void _onAuthStateChanged(AuthState state) {
+    if (state is AuthAuthenticated) {
+      _analytics.logEvent('login_success');
+      _analytics.setUserId(state.user.id.toString());
+      _analytics.setUserProperty(name: 'role', value: 'resident');
+      _crashlytics.setUserId(state.user.id.toString());
+      _crashlytics.log('User authenticated: ${state.user.id}');
+    } else if (state is AuthUnauthenticated) {
+      _analytics.logEvent('logout');
+      _analytics.setUserId(null);
+    } else if (state is AuthError) {
+      _analytics.logEvent('login_failed', parameters: {
+        'reason': state.message,
+      });
+    }
+  }
+
+  /// Wrap [child] with a widget that logs a screen view on first build.
+  Widget _withScreenView(String name, Widget child) {
+    if (name != _lastScreenView) {
+      _lastScreenView = name;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _analytics.logScreenView(screenName: name);
+      });
+    }
+    return child;
+  }
+
   @override
   void dispose() {
+    _authSubscription?.cancel();
     _router.dispose();
     _redirectNotifier.dispose();
     super.dispose();

@@ -50,3 +50,6 @@ app.*.map.json
 
 # Generated env files - DO NOT commit
 *env.g.dart
+
+# Local dependency overrides (machine-specific)
+pubspec_overrides.yaml
